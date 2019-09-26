@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{abc}}
+        <p l-rext="abc"></p>
+        <p l-html="abc"></p>
+        <p>
+            <input l-model="abc"/>
+        </p>
+        <p>
+            <button @click="onclick">点我点我</button>
+        </p>
+    </div>
+</body>
+</html>
+<script src="./Lvue.js"></script>
+<script src="./compile.js"></script>
+<script>
+    var lvue = new Lvue({
+        el:'#app',
+        data:{
+            abc:'abc',
+            foo:{bar:'bar'},
+        },
+        methods: {
+            onclick() {
+                alert('hello~~')
+            }
+        },
+    });
+    lvue.$data.haha = 'lijin'
+</script>
